@@ -1,8 +1,21 @@
-import { Card, CardBody, Skeleton, SkeletonText } from "@chakra-ui/react"
+import {
+  Card,
+  CardBody,
+  Skeleton,
+  SkeletonText,
+  useBreakpointValue,
+} from "@chakra-ui/react"
 
 const GameCardSkeleton = () => {
+  const cardWidth = useBreakpointValue({
+    base: "",
+    md: "100%",
+    lg: "240px",
+    xl: "350px",
+  })
+
   return (
-    <Card width={300} borderRadius={10} overflow={"hidden"}>
+    <Card width={cardWidth} overflow={"hidden"}>
       <Skeleton height={200}></Skeleton>
       <CardBody>
         <SkeletonText></SkeletonText>
@@ -10,4 +23,5 @@ const GameCardSkeleton = () => {
     </Card>
   )
 }
+
 export default GameCardSkeleton
