@@ -11,7 +11,7 @@ const GameCardSkeleton = () => {
     base: "",
     md: "100%",
     lg: "240px",
-    xl: "350px",
+    "2xl": "350px",
   })
 
   return (
